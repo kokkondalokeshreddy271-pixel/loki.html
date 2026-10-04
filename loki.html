@@ -1,0 +1,42 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+</head>
+<body>
+
+<h2>Event Registration</h2>
+
+<form onsubmit="register(event)">
+    Name: <input type="text" required><br><br>
+
+    Email: <input type="email" required><br><br>
+
+    Phone: <input type="tel" required><br><br>
+
+    Event:
+    <select required>
+        <option value="">Select Event</option>
+        <option>Workshop</option>
+        <option>Seminar</option>
+        <option>Conference</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<p id="message"></p>
+
+<script>
+function register(event) {
+    event.preventDefault();
+    document.getElementById("message").innerHTML =
+        "Registration Successful!";
+}
+</script>
+
+</body>
+</html>
+```
